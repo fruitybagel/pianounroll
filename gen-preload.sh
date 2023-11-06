@@ -16,7 +16,7 @@ fi
 
 _out=$(cat <<EOF
 import sys
-sys.path.append($(python3 -c "import sys; print(sys.path[1:])"))
+sys.path += $(python3 -c "import sys; print(sys.path[1:])")
 
 EOF
 )
@@ -24,5 +24,5 @@ EOF
 echo -n "$_out" > "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py"||:
 cp ./preload.py "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/$preloadfname.py"||:
 
-sudo chown "$USER" "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py"
-sudo chown "$USER" "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/$preloadfname.py"
+# sudo chown "root" "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py"
+# sudo chown "root" "/Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/$preloadfname.py"
