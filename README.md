@@ -55,20 +55,6 @@ is at version: **3.9.1**
 This is mainly needed as we need a way 
 to install pip packages
 
-
-### Windows (powershell)
-
-* Just in case you have any python version installed at first
-
-```ps1
-# Install pyenv
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-
-# Restart powershell session
-
-pyenv install 3.9.1
-```
-
 ### Macos
 
 ```sh
@@ -85,6 +71,19 @@ pyenv local 3.9.1
 pyenv virtualenv pianounroll
 
 pip install httpx
+```
+
+### Windows (powershell)
+
+* Just in case you have any python version installed at first
+
+```ps1
+# Install pyenv
+Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+
+# Restart powershell session
+
+pyenv install 3.9.1
 ```
 
 ## Installation
