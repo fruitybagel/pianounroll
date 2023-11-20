@@ -6,8 +6,10 @@ def _print(*x):
     Utils.ShowMessage(str(x))
 
 io = sys.modules["_io"]
+open = io.open
 importlib_external = sys.modules["_frozen_importlib_external"]
 importlib = sys.modules["_frozen_importlib"]
+# importlib.util = sys.modules["_frozen_importlib_external"]
 imp = sys.modules["_imp"]
 
 os = importlib_external._os
