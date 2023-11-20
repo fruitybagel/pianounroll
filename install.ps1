@@ -1,3 +1,23 @@
+# If a working directory is passed, change to that directory
+param (
+    [string]$WorkingDirectory
+)
+
+# Check and self-elevate the script if required
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    $scriptPath = $MyInvocation.MyCommand.Definition
+    $currentPath = Get-Location
+    Start-Process PowerShell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`" -WorkingDirectory `"$currentPath`"" -Verb RunAs
+    exit
+}
+
+if ($WorkingDirectory) {
+    Set-Location $WorkingDirectory
+}
+
+$targetVersion = "3.9.1" # Set your target Python version here
+$pycmd = "python"
+
 $preloadfname = "pianounroll"
 $pycmd = "python"
 $user = [Environment]::UserName
@@ -13,6 +33,20 @@ $pyBridgeBackup = "C:\Program Files\Image-Line\FL Studio 21\Shared\Python\PyBrid
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
     Write-Host "Python is not available"
     exit
+}
+
+$currentVersion = & $pycmd --version
+if ($currentVersion -notlike "*$targetVersion*") {
+    Write-Host "Python version mismatch. Attempting to set local Python version using pyenv..."
+    $pyenvResult = & pyenv local $targetVersion
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Failed to set Python version with pyenv. Current Python version: $currentVersion"
+        Write-Host "Python version mismatch. Proceed? (y/n)"
+        $key = [Console]::ReadKey($true)
+        if ($key.Key -ne "Y") {
+            exit
+        }
+    }
 }
 
 # Execute Python command and get the output
@@ -43,7 +77,7 @@ if (Test-Path $pyBridgeDestination) {
         Move-Item -Path $pyBridgeDestination -Destination $pyBridgeBackup -ErrorAction Stop
         Write-Host "Backup created: PyBridge_x64.dll.old"
     } else {
-        Write-Host "Backup already exists: PyBridge_x64.dll.old"
+        # Write-Host "Backup already exists: PyBridge_x64.dll.old"
     }
 } else {
     Write-Host "Original file not found: PyBridge_x64.dll"
@@ -57,3 +91,5 @@ if (Test-Path $pyBridgeSource) {
 }
 
 Write-Host "Done."
+Write-Host "Press any key to exit..."
+[Console]::ReadKey()
