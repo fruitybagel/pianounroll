@@ -1,11 +1,26 @@
 # pianounroll
 
 pianounroll is a way to escape sandboxing in python
-environment within fl pianoroll
+environment within fl pianoroll. 
 
-It consists of two main components:
+> Revivie that rush of excitement when you read that **python** was added to FL.
+
+pianounroll consists of two main components:
 - python library patch within fl
 - an include that remaps some of the stripped builtins back
+
+## How to use / What does it do
+
+In your pyscript:
+
+```py
+import pianounroll
+
+import sys
+import os
+
+... your code
+```
 
 **Tested on FL v21.2 [build 3505]**
 
@@ -116,13 +131,3 @@ pyenv install 3.9.1
 > - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\syspath.py
 > - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\pianounroll.py
 > - C:\Program Files\Image-Line\FL Studio 21\Shared\Python\PyBridge_x64.dll (+PyBridge_x64.dll.old)
-
-## Post-install (how to use)
-
-Now just create a new pyscript in pianoroll scripts directory with the extra import:
-
-```py
-import pianounroll
-
-... your code
-```
