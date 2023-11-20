@@ -20,10 +20,30 @@ make sure you verify first.
 quite heavily so for example I wasn't easily able to get
 subprocess include working. On Windows it works :D
 
-### Alternative libraries that work
+### Workarounds for some thigns that still don't work
 
 * requests -> httpx
 * ...
+
+#### Opeing files in current directory (missing path builtins)
+
+1. 	In pianoroll scripts folder create a blank py file
+2. 
+	```py
+	import pianorollpath
+	currentpwd = os.path.dirname(os.path.sys.modules["pianorollpath"].__spec__.origin)
+	```
+
+#### (OSX/POSIX only) Executing a program
+
+On windows it's not a problem as subprocess import works
+```py
+pid = os.posix_spawn(program_path, [program_path, ...args], os.environ)
+
+_, exit_status = os.waitpid(pid, 0)
+
+return exit_status
+```
 
 ## Prerequisites
 
