@@ -16,7 +16,9 @@ fi
 
 _out=$(cat <<EOF
 import sys
-sys.path += $(python3 -c "import sys; print(sys.path[1:])")
+old = [x for x in sys.path]
+sys.path = $(python3 -c "import sys; print(sys.path[1:])")
+sys.path += old
 
 EOF
 )
