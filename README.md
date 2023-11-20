@@ -16,8 +16,8 @@ well actually it's real.
 
 I remember when I got a rush of excitement when I read that **python** was added to FL. Until it wasn't really...
 
-Well, pianounroll is a way to escape sandboxing in python
-environment within fl pianoroll. 
+Well, now pianounroll is a way to make that a reality by escaping 
+poor-taste sandboxing in python environment within fl pianoroll. 
 
 pianounroll consists of two main components:
 - python library patch within fl
