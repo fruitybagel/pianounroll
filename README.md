@@ -90,7 +90,7 @@ pyenv install 3.9.1
 
 ### Macos (package)
 
-Install from releases.
+Install from releases. **(Will use system python version only)**
 
 > What it installs:
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/libPyBridge_x64.dylib (+PyBridge_x64.dylib.old)
@@ -102,6 +102,7 @@ Install from releases.
 
 ```
 1. # clone repo & cd
+2. pyenv local pianounroll/3.9.1
 2. ./install-all.sh
 ```
 
@@ -110,11 +111,12 @@ Install from releases.
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
 
-### Windows (powershell)
+### Windows (powershell, ideally as admin)
 
 ```
 1. # clone repo & cd
-2. .\install.ps1
+2. pyenv local 3.9.1
+3. .\install.ps1
 ```
 
 > What it installs:
