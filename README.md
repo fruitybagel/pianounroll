@@ -20,12 +20,12 @@ make sure you verify first.
 quite heavily so for example I wasn't easily able to get
 subprocess include working. On Windows it works :D
 
-### Workarounds for some thigns that still don't work
+### Workarounds for some things that still don't work
 
 * requests -> httpx
 * ...
 
-#### Opeing files in current directory (missing path builtins)
+#### Opening files in current directory (missing path builtins)
 
 1. 	In pianoroll scripts folder create a blank py file
 2. 
@@ -55,7 +55,7 @@ is at version: **3.9.1**
 This is mainly needed as we need a way 
 to install pip packages
 
-### Macos
+### MacOS
 
 ```sh
 brew install pyenv
@@ -88,7 +88,7 @@ pyenv install 3.9.1
 
 ## Installation
 
-### Macos (package)
+### MacOS (package)
 
 Install from releases. **(Will use system python version only)**
 
@@ -98,7 +98,7 @@ Install from releases. **(Will use system python version only)**
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
 
 
-### Macos (shell)
+### MacOS (shell)
 
 ```
 1. # clone repo & cd
