@@ -69,17 +69,20 @@ pip install httpx
 
 ## Installation
 
-### Macos
+### Macos (package)
+
+Install from releases.
+
+### Macos (shell)
 
 ```
-1. clone repo
+1. # clone repo & cd
 2. ./install-all.sh
 ```
 
-### Windows
-
-Currently only manual install
+### Windows (powershell)
 
 ```
-1. .\install.ps1
+1. # clone repo & cd
+2. .\install.ps1
 ```
