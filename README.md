@@ -92,6 +92,12 @@ pyenv install 3.9.1
 
 Install from releases.
 
+> What it installs:
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/libPyBridge_x64.dylib (+PyBridge_x64.dylib.old)
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
+
+
 ### Macos (shell)
 
 ```
@@ -99,9 +105,29 @@ Install from releases.
 2. ./install-all.sh
 ```
 
+> What it installs:
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/libPyBridge_x64.dylib (+PyBridge_x64.dylib.old)
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py
+> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
+
 ### Windows (powershell)
 
 ```
 1. # clone repo & cd
 2. .\install.ps1
+```
+
+> What it installs:
+> - C:\Users\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\syspath.py
+> - C:\Users\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\pianounroll.py
+> - C:\Program Files\Image-Line\FL Studio 21\Shared\Python\PyBridge_x64.dll (+PyBridge_x64.dll.old)
+
+## Post-install (how to use)
+
+Now just create a new pyscript in pianoroll scripts directory with the extra import:
+
+```py
+import pianounroll
+
+... you code
 ```
