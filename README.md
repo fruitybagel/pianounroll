@@ -13,6 +13,8 @@ It consists of two main components:
 
 ## Notice (READ)
 
+Current example(s) only work on OSX
+
 Not all pip packages will work out of the box or at all, 
 make sure you verify first.
 
