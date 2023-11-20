@@ -123,5 +123,5 @@ Now just create a new pyscript in pianoroll scripts directory with the extra imp
 ```py
 import pianounroll
 
-... you code
+... your code
 ```
