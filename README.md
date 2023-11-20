@@ -29,11 +29,11 @@ subprocess include working. On Windows it works :D
 
 #### Opening files in current directory (missing path builtins)
 
-1. 	In pianoroll scripts folder create a blank py file
+1. 	In pianoroll scripts folder create a blank py file 'getpwd'
 2. 
 	```py
-	import pianorollpath
-	currentpwd = os.path.dirname(os.path.sys.modules["pianorollpath"].__spec__.origin)
+	import getpwd
+	currentpwd = os.path.dirname(os.path.sys.modules["getpwd"].__spec__.origin)
 	```
 
 #### (OSX/POSIX only) Executing a program
