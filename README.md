@@ -7,7 +7,7 @@ It consists of two main components:
 - python library patch within fl
 - an include that remaps some of the stripped builtins back
 
-**Tested on on FL v21.2 [build 3505]**
+**Tested on FL v21.2 [build 3505]**
 
 **Windows / MacOS Intel/ARM supported**
 
