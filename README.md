@@ -77,7 +77,7 @@ pip install httpx
 
 ### Windows (powershell)
 
-* Just in case you have any python version installed at first
+* Just in case make sure you've got any python version installed at first
 
 ```ps1
 # Install pyenv
