@@ -112,8 +112,8 @@ pyenv install 3.9.1
 ```
 
 > What it installs:
-> - C:\Users\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\syspath.py
-> - C:\Users\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\pianounroll.py
+> - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\syspath.py
+> - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\pianounroll.py
 > - C:\Program Files\Image-Line\FL Studio 21\Shared\Python\PyBridge_x64.dll (+PyBridge_x64.dll.old)
 
 ## Post-install (how to use)
