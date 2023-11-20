@@ -80,6 +80,7 @@ pip install httpx
 * Just in case make sure you've got any python version installed at first
 
 ```ps1
+Set-ExecutionPolicy RemoteSigned
 # Install pyenv
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 
