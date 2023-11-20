@@ -1,34 +1,35 @@
 # pianounroll
 
-pianounroll is a way to escape sandboxing in python
-environment within fl pianoroll. 
-
-> Revivie that rush of excitement when you read that **python** was added to FL.
-
-pianounroll consists of two main components:
-- python library patch within fl
-- an include that remaps some of the stripped builtins back
-
-## How to use / What does it do
-
-In your pyscript:
+Imagine if...
 
 ```py
 import pianounroll
 
 import sys
 import os
+import io
 
 ... your code
 ```
 
+well actually it's real. 
+
+I remember when I got a rush of excitement when I read that **python** was added to FL. Until it wasn't really...
+
+Well, pianounroll is a way to escape sandboxing in python
+environment within fl pianoroll. 
+
+pianounroll consists of two main components:
+- python library patch within fl
+- an include that remaps some of the stripped builtins back
+
+Currently **Windows / MacOS Intel/ARM are supported**.
+
+For MacOS there is an autopatcher utility & for windows there is currently only just a binary replacement.
+
 **Tested on FL v21.2 [build 3505]**
 
-**Windows / MacOS Intel/ARM supported**
-
-## Notice (READ)
-
-Current example(s) only work on OSX
+## Some gotchas
 
 Not all pip packages will work out of the box or at all, 
 make sure you verify first.
@@ -39,7 +40,7 @@ subprocess include working. On Windows it works :D
 
 ### Workarounds for some things that still don't work
 
-* requests -> httpx
+* (on osx) requests -> httpx
 * ...
 
 #### Opening files in current directory (missing path builtins)
