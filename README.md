@@ -90,16 +90,6 @@ pyenv install 3.9.1
 
 ## Installation
 
-### MacOS (package)
-
-Install from releases. **(Will use system python version only)**
-
-> What it installs:
-> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/libPyBridge_x64.dylib (+PyBridge_x64.dylib.old)
-> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py
-> - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
-
-
 ### MacOS (shell)
 
 ```
