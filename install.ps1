@@ -18,10 +18,13 @@ if ($WorkingDirectory) {
 $targetVersion = "3.9.1" # Set your target Python version here
 $pycmd = "python"
 
+$documentsPath = [Environment]::GetFolderPath('MyDocuments')
+
 $preloadfname = "pianounroll"
 $pycmd = "python"
 $user = [Environment]::UserName
-$destinationFolder = "C:\Users\$user\Documents\Image-Line\FL Studio\Settings\Piano roll scripts"
+$destinationFolder = Join-Path -Path $documentsPath -ChildPath "Image-Line\FL Studio\Settings\Piano roll scripts"
+
 $sysPathFileName = "$destinationFolder\syspath.py"
 $pianoRollFileName = "$destinationFolder\pianounroll.py"
 $preloadFileName = ".\preload.py" # Current working directory
