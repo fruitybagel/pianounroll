@@ -65,7 +65,7 @@ sys.path += old
 "@
 
 # Write the Python script to syspath.py
-$pyContent | Out-File -FilePath $sysPathFileName
+$pyContent -replace "`r`n", "`n" | Out-File -FilePath $sysPathFileName -Encoding utf8 -Force
 
 # Copy preload.py to pianounroll.py in the destination folder
 if (Test-Path $preloadFileName) {
