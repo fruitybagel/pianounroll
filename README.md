@@ -120,6 +120,13 @@ pyenv install 3.9.1
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/syspath.py
 > - /Applications/FL Studio 21.app/Contents/Resources/FL/Shared/Python/Lib/pianounroll.py
 
+### Windows auto-install
+
+```
+1. clone repo
+2. in file explorer open install.bat
+```
+
 ### Windows (powershell, ideally as admin)
 
 ```
