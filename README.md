@@ -127,14 +127,6 @@ pyenv install 3.9.1
 2. in file explorer open install.bat
 ```
 
-### Windows (powershell, ideally as admin)
-
-```
-1. # clone repo & cd
-2. pyenv local 3.9.1
-3. .\install.ps1
-```
-
 > What it installs:
 > - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\syspath.py
 > - C:\Users\\{username}\Documents\Image-Line\FL Studio\Settings\Piano roll scripts\pianounroll.py
