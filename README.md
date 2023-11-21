@@ -27,7 +27,7 @@ Currently **Windows / MacOS Intel/ARM are supported**.
 
 For MacOS there is an autopatcher utility & for windows there is currently only just a binary replacement.
 
-**Tested on FL v21.2 [build 3505]**
+**Tested on FL v21.2.1 [build 3505]**
 
 ## Some gotchas
 
