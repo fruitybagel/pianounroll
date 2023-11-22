@@ -3,7 +3,7 @@
 Imagine if...
 
 ```py
-import pianounroll
+from pianounroll import *
 
 import sys
 import os
