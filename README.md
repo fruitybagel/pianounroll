@@ -70,8 +70,7 @@ return exit_status
 > At the time of writing the builtin python library
 is at version: **3.9.1**
 
-This is mainly needed as we need a way 
-to install pip packages
+This is mainly needed as we need a way to get stripped out imports that are usually bundled with python and also to install pip packages
 
 ### MacOS
 
